@@ -40,7 +40,7 @@ final class DefaultKeyspace implements Keyspace
     /**
      * {@inheritDoc}
      *
-     * @return Cassandra\Map Replication options
+     * @return \Cassandra\Map Replication options
      */
     public function replicationOptions() {}
 
@@ -55,7 +55,7 @@ final class DefaultKeyspace implements Keyspace
      * {@inheritDoc}
      *
      * @param  string          $name  Table name
-     * @return Cassandra\Table        Table instance or null
+     * @return \Cassandra\Table        Table instance or null
      */
     public function table($name) {}
 

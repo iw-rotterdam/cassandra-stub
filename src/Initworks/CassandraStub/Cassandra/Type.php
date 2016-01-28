@@ -25,105 +25,105 @@ interface Type
 {
     /**
      * Get representation of cassandra varchar type
-     * @return Cassandra\Type varchar type
+     * @return \Cassandra\Type varchar type
      */
-    final static function varchar() {}
+    static function varchar();
 
     /**
      * Get representation of cassandra varchar type
-     * @return Cassandra\Type varchar type
+     * @return \Cassandra\Type varchar type
      */
-    final static function text() {}
+    static function text();
 
     /**
      * Get representation of cassandra varchar type
-     * @return Cassandra\Type varchar type
+     * @return \Cassandra\Type varchar type
      */
-    final static function blob() {}
+    static function blob();
 
       /**
        * Get representation of cassandra varchar type
-       * @return Cassandra\Type varchar type
+       * @return \Cassandra\Type varchar type
        */
-    final static function ascii() {}
+     static function ascii();
 
       /**
        * Get representation of cassandra varchar type
-       * @return Cassandra\Type varchar type
+       * @return \Cassandra\Type varchar type
        */
-    final static function bigint() {}
+     static function bigint();
 
       /**
        * Get representation of cassandra varchar type
-       * @return Cassandra\Type varchar type
+       * @return \Cassandra\Type varchar type
        */
-    final static function counter() {}
+     static function counter();
 
       /**
        * Get representation of cassandra varchar type
-       * @return Cassandra\Type varchar type
+       * @return \Cassandra\Type varchar type
        */
-    final static function int() {}
+     static function int();
 
       /**
        * Get representation of cassandra varchar type
-       * @return Cassandra\Type varchar type
+       * @return \Cassandra\Type varchar type
        */
-    final static function varint() {}
+     static function varint();
 
       /**
        * Get representation of cassandra varchar type
-       * @return Cassandra\Type varchar type
+       * @return \Cassandra\Type varchar type
        */
-    final static function boolean() {}
+     static function boolean();
 
       /**
        * Get representation of cassandra varchar type
-       * @return Cassandra\Type varchar type
+       * @return \Cassandra\Type varchar type
        */
-    final static function decimal() {}
+     static function decimal();
 
       /**
        * Get representation of cassandra varchar type
-       * @return Cassandra\Type varchar type
+       * @return \Cassandra\Type varchar type
        */
-    final static function double() {}
+     static function double();
 
       /**
        * Get representation of cassandra varchar type
-       * @return Cassandra\Type varchar type
+       * @return \Cassandra\Type varchar type
        */
-    final static function float() {}
+     static function float();
 
       /**
        * Get representation of cassandra varchar type
-       * @return Cassandra\Type varchar type
+       * @return \Cassandra\Type varchar type
        */
-    final static function inet() {}
+     static function inet();
 
       /**
        * Get representation of cassandra varchar type
-       * @return Cassandra\Type varchar type
+       * @return \Cassandra\Type varchar type
        */
-    final static function timestamp() {}
+     static function timestamp();
 
       /**
        * Get representation of cassandra varchar type
-       * @return Cassandra\Type varchar type
+       * @return \Cassandra\Type varchar type
        */
-    final static function uuid() {}
+     static function uuid();
 
       /**
        * Get representation of cassandra varchar type
-       * @return Cassandra\Type varchar type
+       * @return \Cassandra\Type varchar type
        */
-    final static function timeuuid() {}
+     static function timeuuid();
 
     /**
      * Initialize a Collection type
      * @code{.php}
      * <?php
-     * use Cassandra\Type;
+     * use \Cassandra\Type;
      *
      * $collection = Type::collection(Type::int())
      *                   ->create(1, 2, 3, 4, 5, 6, 7, 8, 9);
@@ -133,13 +133,13 @@ interface Type
      * @param  Type $type The type of values
      * @return Type       The collection type
      */
-    final static function collection(Type $type) {}
+     static function collection(Type $type);
 
     /**
      * Initialize a map type
      * @code{.php}
      * <?php
-     * use Cassandra\Type;
+     * use \Cassandra\Type;
      *
      * $map = Type::map(Type::int(), Type::varchar())
      *            ->create(1, "a", 2, "b", 3, "c", 4, "d", 5, "e", 6, "f")
@@ -150,13 +150,13 @@ interface Type
      * @param  Type $value_type The type of values
      * @return Type             The map type
      */
-    final static function map(Type $key_type, Type $value_type) {}
+     static function map(Type $key_type, Type $value_type);
 
     /**
      * Initialize a set type
      * @code{.php}
      * <?php
-     * use Cassandra\Type;
+     * use \Cassandra\Type;
      *
      * $set = Type::set(Type::varchar)
      *            ->create("a", "b", "c", "d", "e", "f", "g", "h", "i", "j");
@@ -165,7 +165,7 @@ interface Type
      * @endcode
      * @param Type $type [description]
      */
-    final static function set(Type $type) {}
+     static function set(Type $type);
 
     /**
      * Returns the name of this type as string.

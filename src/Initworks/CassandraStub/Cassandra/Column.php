@@ -31,7 +31,7 @@ interface Column
 
     /**
      * Returns the type of the column.
-     * @return Cassandra\Type Type of the column
+     * @return \Cassandra\Type Type of the column
      */
     function type();
 

@@ -97,13 +97,13 @@ interface Table
 
     /**
      * Returns compaction strategy options
-     * @return Cassandra\Map Compaction strategy options
+     * @return \Cassandra\Map Compaction strategy options
      */
     function compactionStrategyOptions();
 
     /**
      * Returns compression parameters
-     * @return Cassandra\Map Compression parameters
+     * @return \Cassandra\Map Compression parameters
      */
     function compressionParameters();
 
@@ -134,7 +134,7 @@ interface Table
     /**
      * Returns column by name
      * @param  string           $name Name of the column
-     * @return Cassandra\Column       Column instance
+     * @return \Cassandra\Column       Column instance
      */
     function column($name);
 

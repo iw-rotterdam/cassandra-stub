@@ -18,11 +18,104 @@
 
 namespace Cassandra\Type;
 
-use Cassandra\Type;
-
-final class Scalar implements Type
+final class Scalar implements \Cassandra\Type
 {
     public function name() {}
     public function __toString() {}
     public function create($value = null) {}
+
+    /**
+     * @inheritDoc
+     */
+    final static function varchar() {}
+
+    /**
+     * @inheritDoc
+     */
+    final static function text() {}
+
+    /**
+     * @inheritDoc
+     */
+    final static function blob() {}
+
+    /**
+     * @inheritDoc
+     */
+    final static function ascii() {}
+
+    /**
+     * @inheritDoc
+     */
+    final static function bigint() {}
+
+    /**
+     * @inheritDoc
+     */
+    final static function counter() {}
+
+    /**
+     * @inheritDoc
+     */
+    final static function int() {}
+
+    /**
+     * @inheritDoc
+     */
+    final static function varint() {}
+
+    /**
+     * @inheritDoc
+     */
+    final static function boolean() {}
+
+    /**
+     * @inheritDoc
+     */
+    final static function decimal() {}
+
+    /**
+     * @inheritDoc
+     */
+    final static function double() {}
+
+    /**
+     * @inheritDoc
+     */
+    final static function float() {}
+
+    /**
+     * @inheritDoc
+     */
+    final static function inet() {}
+
+    /**
+     * @inheritDoc
+     */
+    final static function timestamp() {}
+
+    /**
+     * @inheritDoc
+     */
+    final static function uuid() {}
+
+    /**
+     * @inheritDoc
+     */
+    final static function timeuuid() {}
+
+    /**
+     * @inheritDoc
+     */
+    final static function collection(\Cassandra\Type $type) {}
+
+    /**
+     * @inheritDoc
+     */
+    final static function map(\Cassandra\Type $key_type, \Cassandra\Type $value_type) {}
+
+    /**
+     * @inheritDoc
+     */
+    final static function set(\Cassandra\Type $type) {}
 }

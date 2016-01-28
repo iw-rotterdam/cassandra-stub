@@ -18,9 +18,7 @@
 
 namespace Cassandra\Type;
 
-use Cassandra\Type;
-
-final class Set implements Type
+final class Set implements \Cassandra\Type
 {
     /**
      * Returns "set"
@@ -36,20 +34,115 @@ final class Set implements Type
 
     /**
      * Returns type of values
-     * @return Type Type of values
+     * @return \Cassandra\Type Type of values
      */
     public function type() {}
 
     /**
      * Creates a new Cassandra\Set from the given values.
      *
-     * @throws Exception\InvalidArgumentException when values given are of a
+     * @throws \Exception|\InvalidArgumentException when values given are of a
      *                                            different type than what this
      *                                            set type expects.
      *
      * @param  mixed $value,... One or more values to be added to the set. When
      *                          no values are given, creates an empty set.
-     * @return Cassandra\Set    A set with given values.
+     * @return \Cassandra\Set    A set with given values.
      */
     public function create($value = null) {}
+
+    /**
+     * @inheritDoc
+     */
+    final static function varchar() {}
+
+    /**
+     * @inheritDoc
+     */
+    final static function text() {}
+
+    /**
+     * @inheritDoc
+     */
+    final static function blob() {}
+
+    /**
+     * @inheritDoc
+     */
+    final static function ascii() {}
+
+    /**
+     * @inheritDoc
+     */
+    final static function bigint() {}
+
+    /**
+     * @inheritDoc
+     */
+    final static function counter() {}
+
+    /**
+     * @inheritDoc
+     */
+    final static function int() {}
+
+    /**
+     * @inheritDoc
+     */
+    final static function varint() {}
+
+    /**
+     * @inheritDoc
+     */
+    final static function boolean() {}
+
+    /**
+     * @inheritDoc
+     */
+    final static function decimal() {}
+
+    /**
+     * @inheritDoc
+     */
+    final static function double() {}
+
+    /**
+     * @inheritDoc
+     */
+    final static function float() {}
+
+    /**
+     * @inheritDoc
+     */
+    final static function inet() {}
+
+    /**
+     * @inheritDoc
+     */
+    final static function timestamp() {}
+
+    /**
+     * @inheritDoc
+     */
+    final static function uuid() {}
+
+    /**
+     * @inheritDoc
+     */
+    final static function timeuuid() {}
+
+    /**
+     * @inheritDoc
+     */
+    final static function collection(\Cassandra\Type $type) {}
+
+    /**
+     * @inheritDoc
+     */
+    final static function map(\Cassandra\Type $key_type, \Cassandra\Type $value_type) {}
+
+    /**
+     * @inheritDoc
+     */
+    final static function set(\Cassandra\Type $type) {}
 }

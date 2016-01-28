@@ -18,9 +18,7 @@
 
 namespace Cassandra\Type;
 
-use Cassandra\Type;
-
-final class Map implements Type
+final class Map implements \Cassandra\Type
 {
     /**
      * Returns "map"
@@ -36,13 +34,13 @@ final class Map implements Type
 
     /**
      * Returns type of keys
-     * @return Type Type of keys
+     * @return \Cassandra\Type Type of keys
      */
     public function keyType() {}
 
     /**
      * Returns type of values
-     * @return Type Type of values
+     * @return \Cassandra\Type Type of values
      */
     public function valueType() {}
 
@@ -62,7 +60,7 @@ final class Map implements Type
      * var_dump($map);
      * @endcode
      *
-     * @throws Exception\InvalidArgumentException when keys or values given are
+     * @throws \Exception|\InvalidArgumentException when keys or values given are
      *                                            of a different type than what
      *                                            this map type expects.
      *
@@ -70,7 +68,102 @@ final class Map implements Type
      *                          is a key and each even value is a value for the
      *                          map, e.g. `create(key, value, key, value)`.
      *                          When no values given, creates an empty map.
-     * @return Cassandra\Map    A set with given values.
+     * @return \Cassandra\Map    A set with given values.
      */
     public function create($value = null) {}
+
+    /**
+     * @inheritDoc
+     */
+    final static function varchar() {}
+
+    /**
+     * @inheritDoc
+     */
+    final static function text() {}
+
+    /**
+     * @inheritDoc
+     */
+    final static function blob() {}
+
+    /**
+     * @inheritDoc
+     */
+    final static function ascii() {}
+
+    /**
+     * @inheritDoc
+     */
+    final static function bigint() {}
+
+    /**
+     * @inheritDoc
+     */
+    final static function counter() {}
+
+    /**
+     * @inheritDoc
+     */
+    final static function int() {}
+
+    /**
+     * @inheritDoc
+     */
+    final static function varint() {}
+
+    /**
+     * @inheritDoc
+     */
+    final static function boolean() {}
+
+    /**
+     * @inheritDoc
+     */
+    final static function decimal() {}
+
+    /**
+     * @inheritDoc
+     */
+    final static function double() {}
+
+    /**
+     * @inheritDoc
+     */
+    final static function float() {}
+
+    /**
+     * @inheritDoc
+     */
+    final static function inet() {}
+
+    /**
+     * @inheritDoc
+     */
+    final static function timestamp() {}
+
+    /**
+     * @inheritDoc
+     */
+    final static function uuid() {}
+
+    /**
+     * @inheritDoc
+     */
+    final static function timeuuid() {}
+
+    /**
+     * @inheritDoc
+     */
+    final static function collection(\Cassandra\Type $type) {}
+
+    /**
+     * @inheritDoc
+     */
+    final static function map(\Cassandra\Type $key_type, \Cassandra\Type $value_type) {}
+
+    /**
+     * @inheritDoc
+     */
+    final static function set(\Cassandra\Type $type) {}
 }

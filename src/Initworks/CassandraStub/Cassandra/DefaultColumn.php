@@ -33,7 +33,7 @@ final class DefaultColumn implements Column
     /**
      * {@inheritDoc}
      *
-     * @return Cassandra\Type Type of the column
+     * @return \Cassandra\Type Type of the column
      */
     public function type() {}
 

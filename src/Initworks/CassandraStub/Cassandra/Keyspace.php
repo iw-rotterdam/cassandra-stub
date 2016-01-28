@@ -37,7 +37,7 @@ interface Keyspace
 
     /**
      * Returns replication options
-     * @return Cassandra\Map Replication options
+     * @return \Cassandra\Map Replication options
      */
     function replicationOptions();
 
@@ -50,7 +50,7 @@ interface Keyspace
     /**
      * Returns a table by name
      * @param  string               $name Table name
-     * @return Cassandra\Table|null       Table instance or null
+     * @return \Cassandra\Table|null       Table instance or null
      */
     function table($name);
 
