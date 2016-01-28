@@ -1,0 +1,12 @@
+{
+    "name": "initworks/cassandra-stub",
+    "description": "A set of stubs for Cassandra's PHP Driver. This is based on the 1.0.0 version of the extension.",
+    "minimum-stability": "dev",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Richard Augspurger",
+            "email": "richard@initworks.com"
+        }
+    ]
+}
